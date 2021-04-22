@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'python:3-alpine' } }
+    agent {label master}
     stages {
         stage('build') {
             steps {
-                sh 'python --version'
+                sh 'ls -l'
             }
         }
     }
